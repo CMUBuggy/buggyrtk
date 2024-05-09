@@ -1,0 +1,11 @@
+services:
+  analysis-server:
+    build: analysis-service
+    ports:
+      - "8888:8888"
+    volumes:
+        - ./src:/home/jovyan/src
+        - ./data:/home/jovyan/data
+    environment:
+      - SRC_DIR=/home/jovyan/src
+      - DATA_DIR=/home/jovyan/data
